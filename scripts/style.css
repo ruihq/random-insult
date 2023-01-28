@@ -1,0 +1,24 @@
+body {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: #121212;
+   color: white;
+   font-family: Roboto;
+   height: 100vh;
+}
+
+button {
+   padding: 10px 20px;
+   font-size: 20px;
+   border: none;
+   border-radius: 16px;
+   background-color: #5e5e5e;
+   color: white;
+   margin-top: 20px;
+}
+
+#insult {
+   font-size: 32px;
+   margin-top: 20px;
+}
