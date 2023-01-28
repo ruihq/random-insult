@@ -18,7 +18,7 @@
   3. Click the "Generate Insult" button to generate a random insult
   
   ## Try it!
-  [Click me to try!](https://ruihq.github.io/random-insult)
+  [Click me to try!](https://random-insult.vercel.app/)
   
   ## License
   This project is licensed under the MIT License.
