@@ -3,73 +3,54 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Insult Generator</title>
+    <title>Random Insults Generator</title>
     <style>
-      #insult-generator {
+      body {
         display: flex;
         flex-direction: column;
         align-items: center;
         background-color: #121212;
+        color: white;
+        font-family: Roboto;
         height: 100vh;
       }
 
-      h1 {
-        font-family: Roboto;
-        color: white;
-        margin: 40px 0;
-      }
-
       button {
-        font-family: Roboto;
-        background-color: white;
-        color: #121212;
-        border-radius: 16px;
         padding: 10px 20px;
+        font-size: 20px;
         border: none;
-        cursor: pointer;
+        border-radius: 16px;
+        background-color: #5e5e5e;
+        color: white;
         margin-top: 20px;
       }
 
-      p#insult {
-        font-family: Roboto;
-        color: white;
+      #insult {
+        font-size: 32px;
         margin-top: 20px;
       }
     </style>
   </head>
   <body>
-    <div id="insult-generator">
-      <h1>Random Insult Generator</h1>
-      <button id="generate-insult">Generate Insult</button>
-      <p id="insult"></p>
-    </div>
-
+    <h1>Random Insults Generator</h1>
+    <button id="generateBtn">Generate Insult</button>
+    <p id="insult"></p>
+    <p>&copy; Copyright 2023 ruihq</p>
     <script>
-      const insults = [
-        "You're as useful as a screen door on a submarine.",
-        "You're a few fries short of a happy meal.",
-        "You're the human equivalent of a participation trophy.",
-        "You're the reason God created the middle finger.",
-        "You have the IQ of a peanut.",
-        "You're about as sharp as a bowling ball.",
-        "You're about as useful as a screen door on a submarine.",
-        "You're dumber than a box of hair.",
-        "You're about as bright as a black hole.",
-        "You're so dumb that you got fired from a blow-up doll factory.",
-        "You're so fat, you could sell shade.",
-        "You're so ugly, when you were born the doctor slapped your mother.",
-        "You're so slow, you make a snail look like Usain Bolt."
-      ];
+      const generateBtn = document.querySelector("#generateBtn");
+      const insult = document.querySelector("#insult");
+      let insults;
 
-      const generateInsult = () => {
-        const insult = insults[Math.floor(Math.random() * insults.length)];
-        document.querySelector("#insult").textContent = insult;
-      };
+      fetch("insults.json")
+        .then(response => response.json())
+        .then(data => {
+          insults = data.insults;
+        });
 
-      document.querySelector("#generate-insult").addEventListener("click", generateInsult);
+      generateBtn.addEventListener("click", () => {
+        const randomIndex = Math.floor(Math.random() * insults.length);
+        insult.textContent = insults[randomIndex];
+      });
     </script>
-    <footer style="text-align: center; padding: 16px;">
-  &copy; Copyright 2023 ruihq All rights reserved.
-  </footer>
   </body>
 </html>
