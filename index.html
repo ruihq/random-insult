@@ -1,7 +1,9 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <title>Random Insult Generator</title>
     <script>
       function generateInsult() {
@@ -18,8 +20,6 @@
         ];
         var randomInsult = insults[Math.floor(Math.random() * insults.length)];
         document.getElementById("insult").innerHTML = randomInsult;
-        document.getElementById("insult").style.backgroundColor =
-          "hsl(" + Math.random() * 360 + ", 50%, 50%)";
       }
     </script>
     <style>
@@ -29,6 +29,9 @@
         justify-content: center;
         height: 100vh;
         font-size: 1.2em;
+        font-family: 'Roboto', sans-serif;
+        background-color: #121212;
+        color: white;
         flex-direction: column;
       }
       
