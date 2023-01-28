@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Insult Generator</title>
+    <script>
+      function generateInsult() {
+        var insults = [
+          "You're a total embarrassment.",
+          "You have no talent whatsoever.",
+          "You're the weakest link.",
+          "You're a joke.",
+          "You're a failure.",
+          "You're a disgrace.",
+          "You have no skills.",
+          "You're a worthless human being.",
+          "You're a letdown."
+        ];
+        var randomInsult = insults[Math.floor(Math.random() * insults.length)];
+        document.getElementById("insult").innerHTML = randomInsult;
+        document.getElementById("insult").style.backgroundColor =
+          "hsl(" + Math.random() * 360 + ", 50%, 50%)";
+      }
+    </script>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-size: 1.2em;
+      }
+      
+      button {
+        background-color: hsl(250, 50%, 50%);
+        border: none;
+        border-radius: 16px;
+        padding: 10px 20px;
+        color: white;
+        font-size: 1.2em;
+        cursor: pointer;
+      }
+      
+      @media (max-width: 600px) {
+        body {
+          font-size: 1em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Random Insult Generator</h1>
+    <button onclick="generateInsult()">Generate Insult</button>
+    <p id="insult"></p>
+  </body>
+</html>
