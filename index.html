@@ -37,20 +37,16 @@
     <p id="insult"></p>
     <p>&copy; Copyright 2023 ruihq</p>
     <script>
-      const generateBtn = document.querySelector("#generateBtn");
-      const insult = document.querySelector("#insult");
-      let insults;
+       fetch("insults.json")
+  .then(response => response.json())
+  .then(data => {
+    insults = data.insults;
+    generateBtn.addEventListener("click", () => {
+      const randomIndex = Math.floor(Math.random() * insults.length);
+      insult.textContent = insults[randomIndex];
+    });
+  });
 
-      fetch("insults.json")
-        .then(response => response.json())
-        .then(data => {
-          insults = data.insults;
-        });
-
-      generateBtn.addEventListener("click", () => {
-        const randomIndex = Math.floor(Math.random() * insults.length);
-        insult.textContent = insults[randomIndex];
-      });
     </script>
   </body>
 </html>
