@@ -17,8 +17,8 @@
   2. Open the `index.html` file in your browser
   3. Click the "Generate Insult" button to generate a random insult
   
-  ## Demo
-  [Live Demo](https://example.com)
+  ## Try it!
+  [Click me to try!](https://ruihq.github.io/random-insult)
   
   ## License
   This project is licensed under the MIT License.
