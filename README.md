@@ -1,5 +1,5 @@
-<p align="center">
-  # Random Insult Generator
+<div align="center">
+  <h1>Random Insult Generator</h1>
   A simple web application that generates random insults when a button is clicked.
   
   ## Built With
@@ -23,6 +23,6 @@
   ## License
   This project is licensed under the MIT License.
   
-  [![ForTheBadge built-with-love](https://img.shields.io/badge/Built%20With-Love-red.svg)](https://github.com/[your-username])
-</p>
+  [![ForTheBadge built-with-love](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/ruihq)
+</div>
 
