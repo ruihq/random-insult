@@ -4,49 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Insults Generator</title>
-    <style>
-      body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #121212;
-        color: white;
-        font-family: Roboto;
-        height: 100vh;
-      }
-
-      button {
-        padding: 10px 20px;
-        font-size: 20px;
-        border: none;
-        border-radius: 16px;
-        background-color: #5e5e5e;
-        color: white;
-        margin-top: 20px;
-      }
-
-      #insult {
-        font-size: 32px;
-        margin-top: 20px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1>Random Insults Generator</h1>
     <button id="generateBtn">Generate Insult</button>
     <p id="insult"></p>
     <p>&copy; Copyright 2023 ruihq</p>
-    <script>
-       fetch("insults.json")
-  .then(response => response.json())
-  .then(data => {
-    insults = data.insults;
-    generateBtn.addEventListener("click", () => {
-      const randomIndex = Math.floor(Math.random() * insults.length);
-      insult.textContent = insults[randomIndex];
-    });
-  });
-
-    </script>
+    <script src="insults.js"></script>
   </body>
 </html>
