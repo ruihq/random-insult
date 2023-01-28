@@ -47,6 +47,14 @@
           insults = data.insults;
         });
 
+      generateBtn.addEventListener("mousedown", () => {
+        insult.style.fontFamily = "Comic Sans";
+      });
+
+      generateBtn.addEventListener("mouseup", () => {
+        insult.style.fontFamily = "Roboto";
+      });
+
       generateBtn.addEventListener("click", () => {
         const randomIndex = Math.floor(Math.random() * insults.length);
         insult.textContent = insults[randomIndex];
