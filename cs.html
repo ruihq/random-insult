@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Insults Generator</title>
+    <style>
+      @font-face {
+        font-family: 'Comic Sans';
+        src: url(font/Comic_Sans.ttf') format('truetype');
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #121212;
+        color: white;
+        font-family: ;
+        height: 100vh;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 20px;
+        border: none;
+        border-radius: 16px;
+        background-color: #5e5e5e;
+        color: white;
+        margin-top: 20px;
+      }
+
+      #insult {
+        font-size: 32px;
+        margin-top: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Random Insults Generator</h1>
+    <button id="generateBtn">Generate Insult</button>
+    <p id="insult"></p>
+    <p>&copy; Copyright 2023 <a href="index.html">ruihq</a></p>
+    <script>
+      const generateBtn = document.querySelector("#generateBtn");
+      const insult = document.querySelector("#insult");
+      let insults;
+
+      fetch("insults.json")
+        .then(response => response.json())
+        .then(data => {
+          insults = data.insults;
+        });
+
+      generateBtn.addEventListener("click", () => {
+        const randomIndex = Math.floor(Math.random() * insults.length);
+        insult.textContent = insults[randomIndex];
+      });
+    </script>
+  </body>
+</html>
