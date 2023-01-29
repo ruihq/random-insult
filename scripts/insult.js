@@ -7,3 +7,10 @@ fetch("insults.json")
       insult.textContent = insults[randomIndex];
     });
   });
+
+  if (screen.width >= 980) {
+    window.location.replace("desktop.html");
+  } else if (screen.width >= 128) {
+    window.location.replace("index.html");
+  }
+
