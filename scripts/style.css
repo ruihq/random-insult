@@ -8,40 +8,17 @@ body {
    height: 100vh;
 }
 
-h1 {
-        text-align: center;
-        margin-top: 50px;
-      }
+button {
+   padding: 10px 20px;
+   font-size: 20px;
+   border: none;
+   border-radius: 16px;
+   background-color: #5e5e5e;
+   color: white;
+   margin-top: 20px;
+}
 
-      #generateBtn {
-        display: block;
-        margin: 50px auto;
-        padding: 10px 20px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      #insult {
-        text-align: center;
-        margin-top: 50px;
-        font-style: italic;
-        font-size: 24px;
-      }
-
-      .toggle {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        cursor: pointer;
-      }
-
-      .light-mode {
-        fill: #fff;
-      }
-
-      .dark-mode {
-        fill: #000;
-      }
+#insult {
+   font-size: 32px;
+   margin-top: 20px;
+}
