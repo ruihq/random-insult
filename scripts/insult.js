@@ -7,3 +7,4 @@ fetch("insults.json")
       insult.textContent = insults[randomIndex];
     });
   });
+
