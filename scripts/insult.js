@@ -8,9 +8,3 @@ fetch("insults.json")
     });
   });
 
-  if (screen.width >= 980) {
-    window.location.replace("desktop.html");
-  } else if (screen.width >= 128) {
-    window.location.replace("index.html");
-  }
-
