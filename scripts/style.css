@@ -22,3 +22,11 @@ button {
    font-size: 32px;
    margin-top: 20px;
 }
+
+.light-mode {
+   fill: #fff;
+}
+
+.dark-mode {
+   fill: #121212;
+}
