@@ -25,8 +25,12 @@ button {
 
 .light-mode {
    fill: #fff;
+   background-color: fff;
+   color: blackk;
 }
 
 .dark-mode {
    fill: #121212;
+   background-color: #121212;
+   color: white;
 }
